@@ -2,13 +2,15 @@
 
 <div class="card-columns">
 
-  <div class="card">
-    <img src="./assets/images/aquaman.jpg" class="card-img-top" alt="">
+  <div class="card" *ngFor="let hero of heroes">
+    <img [src]="hero .avatarUrl" class="card-img-top" [alt]="hero .name">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">{{ hero .name }}</h5>
+      <h6 class="card-title">{{ hero .realName }}</h6>
+      <p class="card-text">{{ hero .bio }}</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       <button type="button" class="btn btn-block btn-outline-success">Leer más</button>
     </div>
   </div>
+
 </div>
