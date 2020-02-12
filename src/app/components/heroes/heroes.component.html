@@ -2,14 +2,15 @@
 
 <div class="card-columns">
 
-  <div class="card" *ngFor="let hero of heroes">
+  <div class="card animated fadeIn fast" *ngFor="let hero of heroes; let i = index;">
     <img [src]="hero .avatarUrl" class="card-img-top" [alt]="hero .name">
     <div class="card-body">
       <h5 class="card-title">{{ hero .name }}</h5>
       <h6 class="card-title">{{ hero .realName }}</h6>
       <p class="card-text">{{ hero .bio }}</p>
       <p class="card-text"><small class="text-muted">Primera aparición: {{ hero .firstAppearance }} el {{ hero .dateFirstAppearance }}</small></p>
-      <button type="button" class="btn btn-block btn-outline-success">Leer más</button>
+      <!--button type="button" class="btn btn-block btn-outline-success">Leer más</button-->
+      <a [routerLink]="[ '/hero', i ]" class="btn btn-block btn-outline-success">Leer más</a>
     </div>
   </div>
 
