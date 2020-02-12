@@ -96,4 +96,9 @@ export class HeroesService {
     public getAll() : Hero[] {
         return this .heroes;
     }
+
+    /** Obtiene el heroe por la posición dentro del Array de Heroes, no por Id por que la interface no posee esta propiedad */
+    public getByPosition( item: number ) {
+        return this .heroes[ item ];
+    }
 }

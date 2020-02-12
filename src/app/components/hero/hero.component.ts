@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+/** Providers/Services */
+import { HeroesService, Hero } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-hero',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
-  constructor() { }
+    private hero : Hero;
 
-  ngOnInit() {
-  }
+    constructor(
+        private _activatedRoute: ActivatedRoute,
+        private _heroesService: HeroesService
+    ) {
+        /** Obtiene los parametros enviados (Regresa un Observer 'similar' a una Promesa) por lo que tenemos que subscribirnos a dicho Observer usando subscribe() */
+        this ._activatedRoute .params .subscribe( params => {
+            console .log( 'Parametros recibidos', params );
+
+            /** Obtenemos el Heroe en la posición pasada como parametro, parametrizada con el nombre id al método del Service que obtiene ese dato */
+            this .hero = this ._heroesService .getByPosition( params[ 'id' ] );
+
+        });
+    }
+
+    ngOnInit() {
+    }
 
 }
