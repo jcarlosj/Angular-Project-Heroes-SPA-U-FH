@@ -9,14 +9,14 @@
                     <div class="col-md-8">
                         <h4 class="card-title">{{ hero .name }}</h4>
                         <h5 class="card-title">{{ hero .realName }}</h5>
-                        <p class="card-text"><small class="text-muted">Primera aparición: {{ hero .firstAppearance }} el {{ hero .dateFirstAppearance }}</small></p>
+                        <p class="card-text"><small class="text-muted">Primera aparición: en {{ hero .dateFirstAppearance | date: 'y' }} publicado en {{ hero .firstAppearance | lowercase }} </small></p>
                     </div>
                     <div class="col-md-4">
                         <img *ngIf="hero .franchise" [src]="franchiseUrl" class="card-img franchise-img" [alt]="hero .franchise">
                     </div>
                 </div>
 
-                <h5 class="bio-title">Biografía</h5>
+                <h5 class="bio-title">{{ 'Biografía' | uppercase }} </h5>
                 <p class="card-text">{{ hero .bio }}</p>
             </div>
         </div>
