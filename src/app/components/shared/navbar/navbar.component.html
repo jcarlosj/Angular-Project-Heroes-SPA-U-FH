@@ -23,9 +23,9 @@
         </ul>
 
         <form class="form-inline my-2 my-lg-0">
+            <!-- TO DO: Evento keyup.enter no redirige al Componente esperado (lleva al HomeComponent) > (keyup.enter)="searchHero( hero .value )" -->
             <input #hero
                 (keyup.enter)="searchHero( hero .value )"
-                (blur)="hero .value=''"
                 class="form-control mr-sm-2"
                 placeholder="Superhéroe"
             >
