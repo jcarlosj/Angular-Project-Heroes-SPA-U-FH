@@ -53,12 +53,21 @@ export class HeroesService {
         },
         {
             name: 'Green Lantern',
-            realName: ' Hal Jordan, Kyle Rayner, John Stewart y Guy Gardner',
+            realName: 'Hal Jordan, Kyle Rayner, John Stewart y Guy Gardner',
             dateFirstAppearance: '1959-10-01',
             firstAppearance: 'Showcase #22',
             avatarUrl: './assets/images/green-lantern.jpg',
             bio: 'Creados para preservar el orden intergaláctico, los Linternas Verdes han existido durante varios siglos. Su más reciente recluta, Hal Jordan, es el primer humano en unirse a sus filas. Los Linternas Verdes les tienen poco respeto a los humanos, que hasta ahora han sido incapaces de aprovechar los poderes de los anillos que usa cada miembro. Pero Jordan, un habilidoso piloto de pruebas tiene que enfrentarse a un nuevo enemigo llamado Parallax quien amenaza al universo. La tierr solo ha tenido 4 Linternas verdes',
             franchise: 'DC Comics'
+        },
+        {
+            name: 'Ironman',
+            realName: 'Anthony Edward Stark',
+            dateFirstAppearance: '1963-03-01',
+            firstAppearance: 'Tales of Suspense #39',
+            avatarUrl: './assets/images/ironman.jpg',
+            bio: 'Multimillonario magnate empresarial estadounidense, playboy e ingenioso científico, sufre una grave lesión en el pecho durante un secuestro. Cuando sus captores intentan forzarlo a construir un arma de destrucción masiva crea, en cambio, una armadura poderosa para salvar su vida y escapar del cautiverio. Más tarde, Stark desarrolla su traje, agregando armas y otros dispositivos tecnológicos que diseñó a través de su compañía, Industrias Stark. Él usa el traje y las versiones sucesivas para proteger al mundo como Iron Man. Aunque al principio ocultó su verdadera identidad, Stark finalmente declaró que era, de hecho, Iron Man en un anuncio público.',
+            franchise: 'Marvel Comics'
         },
         {
             name: 'SuperGirl',
