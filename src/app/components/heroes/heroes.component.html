@@ -9,8 +9,8 @@
       <h6 class="card-title">{{ hero .realName }}</h6>
       <p class="card-text">{{ hero .bio }}</p>
       <p class="card-text"><small class="text-muted">Primera aparición: {{ hero .firstAppearance }} el {{ hero .dateFirstAppearance }}</small></p>
-      <!--button type="button" class="btn btn-block btn-outline-success">Leer más</button-->
-      <a [routerLink]="[ '/hero', i ]" class="btn btn-block btn-outline-success">Leer más</a>
+      <button (click)="showHero( i )" type="button" class="btn btn-block btn-outline-success">Leer más</button>
+      <!--a [routerLink]="[ '/hero', i ]" class="btn btn-block btn-outline-success">Leer más</a-->
     </div>
   </div>
 
