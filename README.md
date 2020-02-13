@@ -1,4 +1,6 @@
-# ProjectSpaHeroes
+# App Superhéroes
+
+Este proyecto despliega un listado de superhéroes y permite la búsqueda de los mismos haciendo uso de los conceptos básicos fundamentales de Angular. (v8.2.14)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.24.
 
