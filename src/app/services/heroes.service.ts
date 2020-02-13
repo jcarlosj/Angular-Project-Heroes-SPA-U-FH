@@ -110,4 +110,23 @@ export class HeroesService {
     public getByPosition( item: number ) {
         return this .heroes[ item ];
     }
+
+    /** Busca Heroe */
+    public search( term : string ) {
+        let aHeroes : Hero[] = [];
+
+        term = term .toLowerCase();
+
+        for( let hero of this .heroes ) {
+            let name = hero .name .toLowerCase();
+
+            /** Busca coincidencia entre el nombre del Heroe y el termino de busqueda
+                usando indexOf() que retornara 1 si encuentra coincidencia o cero en caso de no encontrarla */
+            if( name .indexOf( term ) >= 0 ) {
+                aHeroes .push( hero );
+            }
+        }
+
+        return aHeroes;
+    }
 }
